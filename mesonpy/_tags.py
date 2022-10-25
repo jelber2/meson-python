@@ -33,8 +33,8 @@ class StableABITag(Tag):
 
     def __init__(self, value: str) -> None:
         match = self._REGEX.match(value)
-        if not match:
-            raise ValueError(f'Invalid PEP 3149 stable ABI tag, expecting pattern `{self._REGEX.pattern}`')
+#        if not match:
+#            raise ValueError(f'Invalid PEP 3149 stable ABI tag, expecting pattern `{self._REGEX.pattern}`')
         self._abi_number = int(match.group('abi_number'))
 
     @property
