@@ -78,7 +78,7 @@ class InterpreterTag(Tag):
         self._interpreter_version = parts[1]
         self._additional_information = parts[2:]
 
-        if self.implementation != 'cpython' and not self.implementation.startswith('pypy'):
+        if self.implementation != 'cpython' and not self.implementation.startswith('pypy') and not self.implementation.startswith('pyston'):
             raise NotImplementedError(
                 f'Unknown Python implementation: {self.implementation}. '
                 'Please report this to https://github.com/FFY00/mesonpy/issues '
